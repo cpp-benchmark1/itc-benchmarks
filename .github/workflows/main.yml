@@ -40,7 +40,7 @@ jobs:
       run: |
         sudo apt-get install automake
         ./bootstrap
-        CC=gcc LD=gcc CFLAGS=-flint ./configure
+        CC=gcc LD=gcc ./configure
         make
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
