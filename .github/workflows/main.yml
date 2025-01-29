@@ -39,7 +39,7 @@ jobs:
       shell: bash
       run: |
         sudo apt-get install automake
-        git checkout fix-unintended-undefinedness
+        #git checkout fix-unintended-undefinedness
         ./bootstrap
         CC=kcc LD=kcc CFLAGS=-flint ./configure
         make
