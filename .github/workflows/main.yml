@@ -39,9 +39,8 @@ jobs:
       shell: bash
       run: |
         sudo apt-get install automake
-        #git checkout fix-unintended-undefinedness
         ./bootstrap
-        CC=kcc LD=kcc CFLAGS=-flint ./configure
+        CC=gcc LD=gcc CFLAGS=-flint ./configure
         make
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
