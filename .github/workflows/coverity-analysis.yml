@@ -40,9 +40,9 @@ jobs:
           echo "Coverity Tool installed successfully"
       - name: Build with Coverity
         run: |
-          sudo apt-get install automake
+          sudo apt-get install automake binutils-gold
           ./bootstrap
-          ./configure --includedir=$(pwd)/include
+          ./configure --includedir=$(pwd)/include CFLAGS='-fuse-ld=gold'
           coverity_tool/bin/cov-build --dir cov-int make
           cat cov-int/build-log.txt
       - name: Compress with bzip2
