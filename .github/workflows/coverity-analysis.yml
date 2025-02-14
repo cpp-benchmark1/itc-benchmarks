@@ -42,7 +42,7 @@ jobs:
         run: |
           sudo apt-get install automake
           ./bootstrap
-          ./configure
+          ./configure --includedir=$(pwd)/include
           coverity_tool/bin/cov-build --dir cov-int make
       - name: Compress with bzip2
         run: |
