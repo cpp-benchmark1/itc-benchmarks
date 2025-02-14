@@ -14,7 +14,6 @@
 * * MAX VALUE of INT & LONG 2147483647 , unsigned INT & LONG 4294967295
 */
 #include "HeaderFile.h"
-#include <math.h>
 
 /*
 * Types of defects: Errors related to power functions
