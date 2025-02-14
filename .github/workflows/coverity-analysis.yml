@@ -43,8 +43,7 @@ jobs:
           sudo apt-get install automake binutils-gold
           ./bootstrap
           ./configure --includedir=$(pwd)/include CFLAGS='-fuse-ld=gold'
-          coverity_tool/bin/cov-build --dir cov-int "make || true"
-          cat cov-int/build-log.txt
+          coverity_tool/bin/cov-build --dir cov-int make || true
       - name: Compress with bzip2
         run: |
           tar cjvf myproject.tar.bz2 cov-int
