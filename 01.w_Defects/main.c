@@ -95,6 +95,12 @@ int main(int argc,char*argv[])
 		double_free_main ();
 	}
 
+	/* Double Free with recv*/
+	if (vflag_file ==112 || vflag_file == 888)
+	{
+		double_free_recv_main ();
+	}
+
 	/* Double lock*/
 	if (vflag_file ==13 || vflag_file == 888)
 	{
