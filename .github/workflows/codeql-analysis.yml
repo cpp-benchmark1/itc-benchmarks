@@ -40,8 +40,8 @@ jobs:
       run: |
         sudo apt-get install automake binutils-gold
         ./bootstrap
-        ./configure --includedir=$(pwd)/include CFLAGS='-fuse-ld=gold'
-        LDFLAGS="--allow-multiple-definition" make
+        ./configure --includedir=$(pwd)/include CFLAGS='-fuse-ld=gold' LDFLAGS='-Wl,--allow-multiple-definition'
+        make
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
       with:
