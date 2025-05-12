@@ -13,7 +13,7 @@ on:
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
-    runs-on: ubuntu-24.04
+    runs-on: 'ubuntu-20.04'
     permissions:
       security-events: write
       packages: read
@@ -40,7 +40,7 @@ jobs:
       run: |
         sudo apt-get install automake binutils-gold
         ./bootstrap
-        ./configure --includedir=$(pwd)/include CFLAGS='-fuse-ld=gold' LDFLAGS='-Wl,--allow-multiple-definition'
+        ./configure --includedir=$(pwd)/include CFLAGS='-fuse-ld=gold'
         make
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
