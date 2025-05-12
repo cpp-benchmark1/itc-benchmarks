@@ -32,7 +32,7 @@ int main(int argc,char*argv[])
 	/* Buffer overrun(dynamic buffer) */
 	if (vflag_file ==2 || vflag_file == 888)
 	{
-		dynamic_buffer_overrun_main ();
+		dynamic_buffer_overrun_main();
 	}
 
 	/* Buffer underrun(dynamic buffer) */
@@ -86,13 +86,13 @@ int main(int argc,char*argv[])
     /* Deletion of Structure sentinel */
 	if(vflag_file==11 || vflag_file == 888)
 	{
-		deletion_of_data_structure_sentinel_main ();
+		deletion_of_data_structure_sentinel_main();
 	}
 
 	/* Double Free*/
 	if (vflag_file ==12 || vflag_file == 888)
 	{
-		double_free_main ();
+		double_free_main();
 	}
 
 	/* Double lock*/
@@ -116,7 +116,7 @@ int main(int argc,char*argv[])
     /* free non dynamic allocated memory main */
 	if(vflag_file==16 || vflag_file == 888)
 	{
-		free_nondynamic_allocated_memory_main ();
+		free_nondynamic_allocated_memory_main();
 	}
 
 	/* Free NULL Pointer*/
@@ -146,7 +146,7 @@ int main(int argc,char*argv[])
 	/* improper termination of block */
 	if(vflag_file==21 || vflag_file == 888)
 	{
-		improper_termination_of_block_main ();
+		improper_termination_of_block_main();
 	}
 
 	/* Useless assignment */
@@ -224,7 +224,7 @@ int main(int argc,char*argv[])
 	/* Power related errors */
 	if(vflag_file==34 || vflag_file == 888)
 	{
-		pow_related_errors_main ();
+		pow_related_errors_main();
 	}
 
 	/* An incorrect pointer arithmetic */
@@ -236,7 +236,7 @@ int main(int argc,char*argv[])
 	/* Race condition */
 	if (vflag_file ==36 || vflag_file == 888)
 	{
-		race_condition_main ();
+		race_condition_main();
 	}
 
 	/* Redundant Condition */
