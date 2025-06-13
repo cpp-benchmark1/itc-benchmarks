@@ -7,7 +7,6 @@
 * Defect Sub-type: Stack overflow
 * Description: Network-based stack overflow vulnerability (CWE-121)
 */
-
 #include "HeaderFile.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -15,17 +14,18 @@
 #include <unistd.h>
 #include <string.h>
 #include <pthread.h>
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #define BUFFER_SIZE 8  /* Make buffer even smaller to ensure overflow */
 #define PORT 8080
-
 /* Define vflag variable */
 volatile int vflag = 888;  /* Set to 888 to run both functions */
-
 /*
  * Types of defects: Stack overflow through network socket
  * Complexity: Reading from network socket into fixed buffer and using unsafe string operations
  */
+ 
 void st_overflow_network_001() {
     int server_fd, new_socket;
     struct sockaddr_in address;

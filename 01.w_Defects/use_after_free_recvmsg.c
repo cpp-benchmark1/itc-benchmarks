@@ -9,7 +9,7 @@
 * Description: This example demonstrates a use-after-free vulnerability 
 * where a message structure received from recvmsg() is freed and then used.
 */
-
+#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
