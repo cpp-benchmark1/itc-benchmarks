@@ -16,6 +16,10 @@ dead_code.c			       ptr_subtraction.c \
 dead_lock.c			       race_condition.c \
 deletion_of_data_structure_sentinel.c  redundant_cond.c \
 double_free.c			       return_local.c \
+cwe_125_example_1.c            cwe_125_example_2.c \
+cwe_190_example_1.c            cwe_190_example_2.c \
+cwe_191_example_1.c            cwe_191_example_2.c \
+cwe_369_example_1.c            cwe_369_example_2.c \
 double_lock.c			       sign_conv.c \
 double_release.c		       sleep_lock.c \
 endless_loop.c			       st_cross_thread_access.c \
