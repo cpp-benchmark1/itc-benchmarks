@@ -25,7 +25,7 @@
 * Simple TCP server function that receives a connection and returns a value
 */
 char* tcp_server() {
-    int sock_fd = socket(AF_INET, SOCK_STREAM, 0)
+    int sock_fd = socket(AF_INET, SOCK_STREAM, 0);
     if (sock_fd < 0) {
         return NULL;
     }
