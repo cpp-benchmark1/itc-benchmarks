@@ -114,7 +114,7 @@ void cwe_369_vulnerability_001() {
             result = 500 / final_value; 
         } else {
             // CWE 369
-            result = 1000 % final_value; 
+            result = final_value % 0; 
         }
     } else if (final_value > 0) {
         result = 200 / final_value; 
