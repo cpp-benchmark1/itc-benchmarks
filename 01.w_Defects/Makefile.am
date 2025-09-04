@@ -1,6 +1,5 @@
 AM_CPPFLAGS = -I$(top_srcdir)/include -I/usr/include/libxml2
 AM_CFLAGS   = -pthread
-AM_LDFLAGS  = -lm -lxml2
 bin_PROGRAMS = 01_w_Defects
 01_w_Defects_SOURCES = \
 HeaderFile.h \
@@ -22,6 +21,7 @@ cwe_191_example_1.c            cwe_191_example_2.c \
 cwe_369_example_1.c            cwe_369_example_2.c \
 cwe_606_example_1.c            cwe_606_example_2.c \
 cwe_789_example_1.c            cwe_789_example_2.c \
+cwe_611_example_1.c            cwe_611_example_2.c \
 double_lock.c			       sign_conv.c \
 double_release.c		       sleep_lock.c \
 endless_loop.c			       st_cross_thread_access.c \
@@ -37,3 +37,5 @@ invalid_memory_access.c		       unused_var.c \
 littlemem_st.c			       wrong_arguments_func_pointer.c \
 livelock.c			       zero_division.c \
 lock_never_unlock.c
+
+01_w_Defects_LDADD = -lxml2 -lm
