@@ -18,6 +18,18 @@
 #include <unistd.h>
 
 #define PORT 8096
+
+// Function prototypes
+void cwe_476_vulnerability_002();
+char* udp_server();
+char* analyze_network_packet(char* data);
+char* evaluate_packet_pointer(char* data);
+char* restrict_pointer_length(char* data);
+char* modify_pointer_length(char* data);
+char* enhance_normal_pointer(char* data);
+char* process_packet_pointer(char* data);
+char* determine_data_pointer(char* data);
+
 #define BUFFER_SIZE 100
 
 /*

@@ -5,6 +5,13 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+// Function prototypes
+void cwe_732_vulnerability_002();
+char* get_binary_file_path();
+char* validate_binary_location();
+char* retrieve_binary_path();
+char* process_binary_path(char* path);
+
 /*
 * CWE-732: Incorrect Permission Assignment for Critical Resource
 * This example demonstrates creating a file with overly permissive permissions (644)

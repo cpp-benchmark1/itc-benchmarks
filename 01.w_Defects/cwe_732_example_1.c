@@ -5,6 +5,13 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+// Function prototypes
+void cwe_732_vulnerability_001();
+char* get_config_file_path();
+char* validate_config_location();
+char* retrieve_config_path();
+char* process_config_path(char* path);
+
 /*
 * CWE-732: Incorrect Permission Assignment for Critical Resource
 * This example demonstrates creating a file with overly permissive permissions (666)

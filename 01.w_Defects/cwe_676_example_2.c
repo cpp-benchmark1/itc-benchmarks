@@ -11,6 +11,13 @@
 #define PORT 8081
 #define BUFFER_SIZE 1024
 
+// Function prototypes
+void cwe_676_vulnerability_002();
+char* udp_server();
+time_t decode_network_packet(char* data);
+time_t interpret_packet_data(char* data);
+time_t extract_packet_timestamp(char* data);
+
 /*
 * CWE-676: Use of Potentially Dangerous Function
 * This example demonstrates using gmtime() with external data which can be dangerous

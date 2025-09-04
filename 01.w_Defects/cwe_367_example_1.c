@@ -10,6 +10,13 @@
 #define PORT 8082
 #define BUFFER_SIZE 1024
 
+// Function prototypes
+void cwe_367_vulnerability_001();
+char* tcp_server();
+char* analyze_network_request(char* data);
+char* validate_request_data(char* data);
+char* extract_file_path(char* data);
+
 /*
 * CWE-367: Time-of-check Time-of-use (TOCTOU) Race Condition
 * This example demonstrates a TOCTOU vulnerability where a file is checked

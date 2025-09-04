@@ -5,6 +5,9 @@
 // Declare gets() as extern since it's not in C11 standard
 extern char *gets(char *s);
 
+// Function prototypes
+void cwe_242_vulnerability_001();
+
 /*
 * CWE-242: Use of Inherently Dangerous Function
 * This example demonstrates using gets() function which is inherently dangerous

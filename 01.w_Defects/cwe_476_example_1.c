@@ -18,6 +18,18 @@
 #include <unistd.h>
 
 #define PORT 8095
+
+// Function prototypes
+void cwe_476_vulnerability_001();
+char* tcp_server();
+char* process_network_data(char* data);
+char* validate_data_pointer(char* data);
+char* limit_pointer_length(char* data);
+char* adjust_pointer_length(char* data);
+char* process_normal_pointer(char* data);
+char* handle_data_pointer(char* data);
+char* calculate_data_pointer(char* data);
+
 #define BUFFER_SIZE 100
 
 /*
