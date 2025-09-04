@@ -38,7 +38,12 @@ jobs:
     - if: matrix.build-mode == 'manual'
       shell: bash
       run: |
-        sudo apt-get install automake binutils-gold
+        sudo apt-get update -y
+        sudo apt-get install -y \
+          automake binutils-gold pkg-config \
+          libxml2-dev \
+          libmysqlclient-dev \
+          libldap2-dev
         ./bootstrap
         ./configure --includedir=$(pwd)/include CFLAGS='-fuse-ld=gold' LDFLAGS='-Wl,--allow-multiple-definition'
         make
