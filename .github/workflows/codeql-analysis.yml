@@ -40,7 +40,7 @@ jobs:
       run: |
         sudo apt-get update -y
         sudo apt-get install -y \
-          automake binutils-gold \
+          automake binutils-gold pkg-config \
           libxml2-dev \
           libmysqlclient-dev \
           libldap2-dev

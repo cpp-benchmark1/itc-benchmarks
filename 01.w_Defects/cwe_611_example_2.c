@@ -22,6 +22,14 @@
 #define PORT 8094
 #define BUFFER_SIZE 100
 
+char* analyze_network_packet(char* packet);
+char* evaluate_packet_path(char* path);
+char* restrict_path_length(char* path);
+char* modify_path_length(char* path);
+char* process_packet_path(char* path);
+char* determine_file_path(char* path);
+
+
 /*
 * Simple UDP server function that receives a datagram and returns a value
 */

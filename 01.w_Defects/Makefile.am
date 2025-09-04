@@ -1,5 +1,6 @@
-AM_CPPFLAGS = -I$(top_srcdir)/include -I/usr/include/libxml2
-AM_CFLAGS   = -pthread
+AM_CPPFLAGS = -I$(top_srcdir)/include $(shell pkg-config --cflags libxml-2.0)
+AM_CFLAGS = -pthread
+AM_LDFLAGS  = -lm $(shell pkg-config --libs libxml-2.0)
 bin_PROGRAMS = 01_w_Defects
 01_w_Defects_SOURCES = \
 HeaderFile.h \
@@ -37,5 +38,3 @@ invalid_memory_access.c		       unused_var.c \
 littlemem_st.c			       wrong_arguments_func_pointer.c \
 livelock.c			       zero_division.c \
 lock_never_unlock.c
-
-01_w_Defects_LDADD = -lxml2 -lm
