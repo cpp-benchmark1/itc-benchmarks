@@ -13,6 +13,12 @@
 #include <string.h>
 #include <ldap.h>
 
+char* get_ldap_credentials();
+char* authenticate_ldap_access();
+char* retrieve_ldap_password();
+char* process_ldap_password(char* password);
+
+
 /*
 * CWE-798: Use of Hard-coded Password vulnerability
 * Source: Hard-coded password in function chain

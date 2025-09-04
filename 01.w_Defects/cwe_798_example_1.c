@@ -13,6 +13,12 @@
 #include <string.h>
 #include <mysql/mysql.h>
 
+char* get_database_credentials();
+char* validate_database_access();
+char* retrieve_mysql_password();
+char* process_mysql_password(char* password);
+
+
 /*
 * CWE-798: Use of Hard-coded Password vulnerability
 * Source: Hard-coded password in function chain

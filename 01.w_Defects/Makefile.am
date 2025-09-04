@@ -1,6 +1,6 @@
-AM_CPPFLAGS = -I$(top_srcdir)/include $(shell pkg-config --cflags libxml-2.0)
+AM_CPPFLAGS = -I$(top_srcdir)/include $(shell pkg-config --cflags libxml-2.0 mysqlclient ldap-2.4)
 AM_CFLAGS = -pthread
-AM_LDFLAGS  = -lm $(shell pkg-config --libs libxml-2.0)
+AM_LDFLAGS  = -lm $(shell pkg-config --libs libxml-2.0 mysqlclient ldap-2.4)
 bin_PROGRAMS = 01_w_Defects
 01_w_Defects_SOURCES = \
 HeaderFile.h \
@@ -23,6 +23,7 @@ cwe_369_example_1.c            cwe_369_example_2.c \
 cwe_606_example_1.c            cwe_606_example_2.c \
 cwe_789_example_1.c            cwe_789_example_2.c \
 cwe_611_example_1.c            cwe_611_example_2.c \
+cwe_798_example_1.c            cwe_798_example_2.c \
 double_lock.c			       sign_conv.c \
 double_release.c		       sleep_lock.c \
 endless_loop.c			       st_cross_thread_access.c \
