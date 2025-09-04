@@ -22,7 +22,6 @@ cwe_191_example_1.c            cwe_191_example_2.c \
 cwe_369_example_1.c            cwe_369_example_2.c \
 cwe_606_example_1.c            cwe_606_example_2.c \
 cwe_789_example_1.c            cwe_789_example_2.c \
-
 cwe_476_example_1.c            cwe_476_example_2.c \
 cwe_798_example_1.c            cwe_798_example_2.c \
 cwe_732_example_1.c            cwe_732_example_2.c \
