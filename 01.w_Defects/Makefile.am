@@ -1,6 +1,16 @@
-AM_CPPFLAGS = -I$(top_srcdir)/include $(shell pkg-config --cflags libxml-2.0 mysqlclient ldap-2.4)
+AM_CPPFLAGS = -I$(top_srcdir)/include \
+              $(shell pkg-config --cflags libxml-2.0) \
+              -I/usr/include/mysql \
+              -I/usr/include/ldap
+
 AM_CFLAGS = -pthread
-AM_LDFLAGS  = -lm $(shell pkg-config --libs libxml-2.0 mysqlclient ldap-2.4)
+
+AM_LDFLAGS = -lm \
+             -lmysqlclient \
+             -lldap \
+             $(shell pkg-config --libs libxml-2.0)
+
+
 bin_PROGRAMS = 01_w_Defects
 01_w_Defects_SOURCES = \
 HeaderFile.h \
