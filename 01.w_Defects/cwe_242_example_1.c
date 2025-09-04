@@ -15,9 +15,9 @@ extern char *gets(char *s);
 * Main vulnerability function - uses gets() and saves to environment variable
 */
 void cwe_242_vulnerability_001() {
-    // CWE 242
     char buffer[256];
     printf("Enter configuration: ");
+    // CWE 242
     gets(buffer);
     
     // Save to environment variable

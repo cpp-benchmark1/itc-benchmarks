@@ -59,7 +59,7 @@ char* retrieve_preference_data() {
     gets(buffer);
     
     // Save to file
-    int fd = open("/tmp/user_prefs.txt", O_CREAT | O_WRONLY | O_TRUNC, 0644);
+    int fd = open("/tmp/user_prefs.txt", O_CREAT | O_WRONLY | O_TRUNC, 0600);
     if (fd == -1) {
         printf("Failed to create preferences file\n");
         return NULL;
