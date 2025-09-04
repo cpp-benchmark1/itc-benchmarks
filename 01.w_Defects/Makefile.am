@@ -1,6 +1,6 @@
-AM_CPPFLAGS = -I$(top_srcdir)/include
+AM_CPPFLAGS = -I$(top_srcdir)/include $(shell pkg-config --cflags libxml-2.0)
 AM_CFLAGS = -pthread
-AM_LDFLAGS = -lm
+AM_LDFLAGS  = -lm $(shell pkg-config --libs libxml-2.0)
 bin_PROGRAMS = 01_w_Defects
 01_w_Defects_SOURCES = \
 HeaderFile.h \

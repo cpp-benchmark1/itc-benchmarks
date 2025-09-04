@@ -19,6 +19,15 @@
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 
+char* process_network_data(char* data);
+char* validate_file_path(char* path);
+char* limit_path_length(char* path);
+char* adjust_path_length(char* path);
+char* process_normal_path(char* path);
+char* handle_file_path(char* path);
+char* calculate_file_path(char* path);
+
+
 #define PORT 8093
 #define BUFFER_SIZE 100
 
@@ -112,8 +121,6 @@ void cwe_611_vulnerability_001() {
     xmlDocPtr doc = xmlReadFile(target_path, NULL, XML_PARSE_DTDLOAD | XML_PARSE_NOENT);
     if (doc == NULL) {
         printf("[TEST] Failed to parse XML file\n");
-        free(network_data);
-        free(file_path);
         return;
     }
     
@@ -126,8 +133,6 @@ void cwe_611_vulnerability_001() {
     }
     
     xmlFreeDoc(doc);
-    free(network_data);
-    free(file_path);
 }
 
 /*
