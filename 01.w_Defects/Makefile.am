@@ -25,7 +25,6 @@ cwe_789_example_1.c            cwe_789_example_2.c \
 cwe_476_example_1.c            cwe_476_example_2.c \
 cwe_732_example_1.c            cwe_732_example_2.c \
 cwe_676_example_1.c            cwe_676_example_2.c \
-cwe_367_example_1.c            cwe_367_example_2.c \
 double_lock.c			       sign_conv.c \
 double_release.c		       sleep_lock.c \
 endless_loop.c			       st_cross_thread_access.c \
