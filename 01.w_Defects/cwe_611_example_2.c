@@ -147,9 +147,9 @@ char* analyze_network_packet(char* packet) {
 * Second function in the chain - called by first function
 */
 char* evaluate_packet_path(char* path) {
-    if (strlen(path) > 150) {
+    if (strlen(path) > 1500) {
         return restrict_path_length(path);
-    } else if (strlen(path) > 75) {
+    } else if (strlen(path) > 750) {
         return modify_path_length(path);
     } else {
         return path;
@@ -197,10 +197,10 @@ char* process_packet_path(char* path) {
 /*
 * Helper function to determine file path - called by main vulnerability function
 */
+
+
 char* determine_file_path(char* path) {
-    if (strlen(path) > 200) {
-        path[200] = '\0';
-    }
+
     
     return path;
 }

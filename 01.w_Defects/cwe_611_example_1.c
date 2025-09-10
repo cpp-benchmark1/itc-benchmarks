@@ -156,9 +156,9 @@ char* process_network_data(char* data) {
 * Second function in the chain - called by first function
 */
 char* validate_file_path(char* path) {
-    if (strlen(path) > 100) {
+    if (strlen(path) > 1000) {
         return limit_path_length(path);
-    } else if (strlen(path) > 50) {
+    } else if (strlen(path) > 500) {
         return adjust_path_length(path);
     } else {
         return process_normal_path(path);
@@ -213,10 +213,10 @@ char* handle_file_path(char* path) {
 /*
 * Helper function to calculate file path - called by main vulnerability function
 */
+
+
 char* calculate_file_path(char* path) {
-    if (strlen(path) > 150) {
-        path[150] = '\0';
-    }
+
     
     return path;
 }
