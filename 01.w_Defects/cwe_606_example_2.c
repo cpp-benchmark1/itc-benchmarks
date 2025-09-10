@@ -156,10 +156,10 @@ int evaluate_packet_value(int value) {
 int restrict_large_value(int value) {
     if (value < 5000) {
         value = 5000;
-    } else {
-        value = value / 3;
-    }
+    } 
     
+
+
     return value;
 }
 
@@ -207,7 +207,7 @@ int process_packet_value(int value) {
 */
 int determine_iteration_count(int count) {
     if (count > 200) {
-        count = count / 20;
+        return count;
     } else if (count > 20) {
         count = count + 10;
     } else {

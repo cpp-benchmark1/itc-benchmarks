@@ -168,9 +168,9 @@ int validate_input_value(int value) {
 int limit_large_value(int value) {
     if (value < 10000) {
         value = 10000;
-    } else {
-        value = value / 2;
-    }
+    } 
+    
+
     
     return value;
 }
